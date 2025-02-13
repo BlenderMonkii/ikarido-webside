@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'node:23-alpine'
+                    image 'node:23-alpine3.20'
                     reuseNode true
                 }
             }
@@ -24,7 +24,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'mcr.microsoft.com/dotnet/sdk:8.0'
+                    image 'node:23-alpine3.20'
                     reuseNode true
                 }
             }
